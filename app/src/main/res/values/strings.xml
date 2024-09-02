@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab_2</string>
+    <string name="diseases_info">Diseases Information</string>
+    <string name="find">Seek Package</string>
+    <string name="infoss">Your PACKAGE includes -</string>
+    <string-array name="spinner">
+        <item>No option selected . . .</item>
+        <item>Front-End Package</item>
+        <item>Back-End Package</item>
+        <item>Full Stack Package</item>
+    </string-array>
+</resources>

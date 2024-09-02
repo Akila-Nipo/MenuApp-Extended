@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#f5dafd">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Yellow Bar View -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="#FFFF00" />
+
+        <!-- Bold TextView on top of the Yellow Bar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language Learning App"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:paddingBottom="8dp"/>
+
+    </FrameLayout>
+    <!-- Header Image -->
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header_image"
+        android:layout_marginBottom="16dp"/>
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Choose your PACKAGE:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/heading"
+        android:textColor="@color/black">
+
+    </TextView>
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:textStyle="bold"
+        android:textColor="#710990"
+        android:id="@+id/spinner"
+        android:entries="@array/spinner"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/spinner_back"
+        >
+
+    </Spinner>
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/holo_purple"
+        android:text="@string/find"
+        android:textSize="20sp"
+        android:id="@+id/button"
+        android:onClick="onClickFindInfo">
+
+    </Button>
+    <ImageView
+        android:id="@+id/footerImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/footer_image"
+        android:layout_marginTop="16dp"/>
+
+
+
+
+
+
+
+</LinearLayout>

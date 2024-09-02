@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:orientation="vertical"
+    android:background="#f5dafd">
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/infoss"
+        android:gravity="center"
+        android:textColor="@color/black">
+
+    </TextView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#eae0ec"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp"
+        android:padding="10dp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:id="@+id/text"
+            android:paddingTop="5dp"
+
+            >
+        </TextView>
+ </com.google.android.material.card.MaterialCardView>
+    <ImageView
+        android:id="@+id/footerImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/footer_image"
+        android:layout_marginTop="70dp"/>
+
+</LinearLayout>
