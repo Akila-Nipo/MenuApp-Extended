@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickFindInfo(View view){
         TextView info =(TextView)  findViewById(R.id.text);
-        TextView info2 =(TextView)  findViewById(R.id.infoss);
-        Spinner dis = (Spinner) findViewById(R.id.spinner);
-        String type=String.valueOf(dis.getSelectedItem());
+        TextView displayedText =(TextView)  findViewById(R.id.infoss);
+        Spinner pack = (Spinner) findViewById(R.id.spinner);
+        String type=String.valueOf(pack.getSelectedItem());
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra(SecondActivity.EXTRA_MESSAGE, type);
         startActivity(intent);

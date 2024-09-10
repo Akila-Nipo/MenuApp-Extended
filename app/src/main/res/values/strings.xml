@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Lab_2</string>
-    <string name="diseases_info">Diseases Information</string>
     <string name="find">Seek Package</string>
     <string name="infoss">Your PACKAGE includes -</string>
     <string-array name="spinner">

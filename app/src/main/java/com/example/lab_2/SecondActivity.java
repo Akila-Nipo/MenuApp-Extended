@@ -14,49 +14,49 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
-    public class Disease{
-        List<String>getInfo(String dis){
-            List<String>info= new ArrayList<>();
-            if(dis.equals("Front-End Package")) {
-                info.add("\n . React");
-                info.add("\n . JavaScript");
-                info.add("\n . Vite on Node.js platform");
+    public class Pack{
+        List<String>getDetails(String pack){
+            List<String>bundle= new ArrayList<>();
+            if(pack.equals("Front-End Package")) {
+                bundle.add("\n . React");
+                bundle.add("\n . JavaScript");
+                bundle.add("\n . Vite on Node.js platform");
             }
-            else if(dis.equals("Back-End Package")) {
-                info.add("\n . Django");
-                info.add("\n . Python");
-                info.add("\n . Heroku on Python platform");
-            }
-
-            else if(dis.equals("Full Stack Package")){
-                info.add("\n . Angular");
-                info.add("\n . Express.js");
-                info.add("\n . AWS with TypeScript/JavaScript");
-
+            else if(pack.equals("Back-End Package")) {
+                bundle.add("\n . Django");
+                bundle.add("\n . Python");
+                bundle.add("\n . Heroku on Python platform");
             }
 
+            else if(pack.equals("Full Stack Package")){
+                bundle.add("\n . Angular");
+                bundle.add("\n . Express.js");
+                bundle.add("\n . AWS with TypeScript/JavaScript");
 
-            return info;
+            }
+
+
+            return bundle;
         }
     }
-    private Disease expert= new Disease();
+    private Pack expert= new Pack();
     public static final String EXTRA_MESSAGE="message";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_second);
-        TextView info2 =(TextView)  findViewById(R.id.infoss);
+        TextView displayedText =(TextView)  findViewById(R.id.infoss);
         Intent intent = getIntent();
         String messageText = intent.getStringExtra(EXTRA_MESSAGE);
         TextView messageView = (TextView)findViewById(R.id.text);
-        List<String> infoList =expert.getInfo(messageText);
+        List<String> infoList =expert.getDetails(messageText);
         StringBuilder infoFormatted = new StringBuilder();
         for(String inf : infoList)
         {
             infoFormatted.append(inf).append('\n');
         }
-        info2.setText("Your PACKAGE includes - ");
+        displayedText.setText("Your PACKAGE includes - ");
         messageView .setText(infoFormatted);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
